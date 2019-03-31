@@ -8,33 +8,36 @@
     <link rel="stylesheet" type="text/css" href="style/index_style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="scripts/password.js"></script>
+    <script src="scripts/util.js"></script>
   </head>
 
-  <body>
+  <body onresize="windowResize()">
 
-    <table id="startTable" align="center">
+  <div id="entry"><p id="entryText"></p></div>
 
-      <tr class="tRow">
+  <table id="table" align="center">
 
-        <td id="td0" class="tData"></td>
+    <tr class="tRow">
 
-        <td id="td1" class="tData"></td>
+      <td id="tData0" class="tData"><div id="tDiv0" class="tDiv"></div></td>
 
-        <td id="td2" class="tData"></td>
+      <td id="tData1" class="tData"><div id="tDiv1" class="tDiv"></div></td>
 
-      </tr>
+      <td id="tData2" class="tData"><div id="tDiv2" class="tDiv"></div></td>
 
-      <tr class="tRow">
+    </tr>
 
-        <td id="td3" class="tData"></td>
+    <tr class="tRow">
 
-        <td id="td4" class="tData"></td>
+      <td id="tData3" class="tData"><div id="tDiv3" class="tDiv"></div></td>
 
-        <td id="td5" class="tData"></td>
+      <td id="tData4" class="tData"><div id="tDiv4" class="tDiv"></div></td>
 
-      </tr>
+      <td id="tData5" class="tData"><div id="tDiv5" class="tDiv"></div></td>
 
-    </table>
+    </tr>
+
+  </table>
 
   </body>
 

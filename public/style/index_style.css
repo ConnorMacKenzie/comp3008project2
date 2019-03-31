@@ -9,7 +9,7 @@ body{
     background-color: gray;
 }
 
-#startTable{
+#table{
     background-color: black;
     position: relative;
     top: 50%;
@@ -17,16 +17,47 @@ body{
     width: 80%;
 }
 
-.tRow{
+#entry{
+    position: absolute;
+    background-color: aliceblue;
+    border-radius: 25px;
+    text-align: center;
+    display: table;
+}
 
+#entryText{
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 5em;
 }
 
 .tData{
-
     text-align: center;
     background-color: #6c9fff;
+    position: relative;
 }
 
-.tDiv {
-    /*padding: 10%;*/
+.tDiv{
+
+}
+
+img{
+    padding-bottom: 2%;
+}
+
+.lengthButton{
+    position: absolute;
+    bottom: 0;
+    width: 48.5%;
+    margin: 1%;
+    font-size: 2em;
+    font-family: Tahoma;
+}
+
+.short{
+    left:0;
+}
+
+.long{
+    right:0;
 }
