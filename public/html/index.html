@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
   <head>
     <meta charset="utf-8">
     <title>COMP3008 Project 2</title>
+    <!--<link rel='icon' type='image/x-icon' href='favicon.ico' />-->
+    <link rel="stylesheet" type="text/css" href="style/index_style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="scripts/password.js"></script>
+    <script src="scripts/util.js"></script>
   </head>
-  <body>
-    <div>
-      <p>Hello World</p>
-    <div>
+
+  <body onresize="windowResize()">
+
+  <div id="entry"><p id="entryText"></p></div>
+
+  <table id="table" align="center">
+
+    <tr class="tRow">
+
+      <td id="tData0" class="tData"><div id="tDiv0" class="tDiv"></div></td>
+
+      <td id="tData1" class="tData"><div id="tDiv1" class="tDiv"></div></td>
+
+      <td id="tData2" class="tData"><div id="tDiv2" class="tDiv"></div></td>
+
+    </tr>
+
+    <tr class="tRow">
+
+      <td id="tData3" class="tData"><div id="tDiv3" class="tDiv"></div></td>
+
+      <td id="tData4" class="tData"><div id="tDiv4" class="tDiv"></div></td>
+
+      <td id="tData5" class="tData"><div id="tDiv5" class="tDiv"></div></td>
+
+    </tr>
+
+  </table>
+
   </body>
+
 </html>

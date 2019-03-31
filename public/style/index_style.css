@@ -1,0 +1,73 @@
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: gray;
+}
+
+#table{
+    background-color: black;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+}
+
+#entry{
+    position: absolute;
+    background-color: aliceblue;
+    border-radius: 25px;
+    text-align: center;
+    display: table;
+}
+
+#entryText{
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 4em;
+}
+
+.tData{
+    text-align: center;
+    background-color: #6c9fff;
+    position: relative;
+}
+
+.tDiv{
+
+}
+
+img{
+    padding-bottom: 2%;
+}
+
+.allButtons{
+    position: absolute;
+    font-size: 2em;
+}
+
+.lengthButton{
+    bottom: 0;
+    width: 48.5%;
+    margin: 1%;
+}
+
+.text{
+    font-family: Tahoma;
+}
+
+.short{
+    left:0;
+}
+
+.long{
+    right:0;
+}
+
+/*.barButtons{*/
+    /*padding: 2%;*/
+/*}*/
