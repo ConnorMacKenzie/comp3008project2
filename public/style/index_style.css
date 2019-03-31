@@ -28,7 +28,7 @@ body{
 #entryText{
     display: table-cell;
     vertical-align: middle;
-    font-size: 5em;
+    font-size: 4em;
 }
 
 .tData{
@@ -45,12 +45,18 @@ img{
     padding-bottom: 2%;
 }
 
-.lengthButton{
+.allButtons{
     position: absolute;
+    font-size: 2em;
+}
+
+.lengthButton{
     bottom: 0;
     width: 48.5%;
     margin: 1%;
-    font-size: 2em;
+}
+
+.text{
     font-family: Tahoma;
 }
 
@@ -61,3 +67,7 @@ img{
 .long{
     right:0;
 }
+
+/*.barButtons{*/
+    /*padding: 2%;*/
+/*}*/

@@ -1,3 +1,5 @@
+
+
 function customAlert(message, callback=null){
     console.log("function: customAlert");
 
@@ -49,11 +51,25 @@ function customAlert(message, callback=null){
         "</button>"
     );
 
+    $(document).keypress(function(event){
+
+        console.log($("#alertButton"))
+
+        let keycode = (event.keyCode ? event.keyCode : event.which);
+
+        if (keycode === 13) {
+            $("#alertButton").click();
+            $(document).off()
+        }
+    });
+
     if(callback !== null){
         $("#alertButton").click(callback);
     }
 
 }
+
+
 
 // Clears all elements related to custom alert
 function removeCustomAlert() {
