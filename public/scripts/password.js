@@ -1,11 +1,43 @@
 
 const animal_names = ['bird', 'cat', 'cow', 'dog', 'horse', 'lion'];
 
+const animal_enum =
+  {
+    'bird_short': 0,
+    'bird_long': 1,
+    'cat_short': 2,
+    'cat_long': 3,
+    'cow_short': 4,
+    'cow_long': 5,
+    'dog_short': 6,
+    'dog_long': 7,
+    'horse_short': 8,
+    'horse_long': 9,
+    'lion_short': 10,
+    'lion_long': 11,
+  }
+
+const passwords_enum = {
+  bank: ["dog_short", "dog_long", "cat_short", "cat_long", "bird_short", "bird_short"],
+  email: ["horse_short", "horse_long", "horse_long", "lion_short", "dog_short", "cat_short"],
+  shop: ["dog_short", "dog_short", "cow_short", "cow_long", "horse_short", "horse_long"]
+}
+
+const accounts = ['bank', 'email', 'shop']
+
 const N = animal_names.length;
+
+var password = [];
+var start;
+var end;
+var currentAccount;
+var session = sessionID(36);
 
 // Add animals pictures and buttons
 $(document).ready(function(){
     console.log("function: document.ready");
+
+    currentAccount = accounts[getRandomInt(3)]
 
     // Animal pictures
     for(let i=0; i<N; i++){
@@ -41,7 +73,6 @@ $(document).ready(function(){
             "</button>");
     }
 
-
     let body = $("body");
 
     // Reset button
@@ -74,7 +105,7 @@ $(window).on('load', function() {
         if (entry_bar_done === true){
 
             entry_buttons();
-            customAlert("Please make a password of length six by clicking long or short animal sounds.");
+            customAlert("Please enter the password of the " + currentAccount + " account.", startCallback);
             clearInterval(interID);
         }
     }, 100);
@@ -124,7 +155,7 @@ function entry_bar() {
 
 function reset() {
     console.log("function: reset");
-
+    password = [];
     // TODO send server reset post
 
     $("#entryText").html("");
@@ -132,15 +163,46 @@ function reset() {
 
 
 function done() {
+    end = Date.now();
     console.log("function: done");
 
-    // TODO send server done post
+    let success = isPassCorrect();
+
+    let postData = {
+      user: "test",
+      success: success,
+      password: password,
+      end: end,
+      session: session
+    }
+
+    $.ajax({
+    type: "POST",
+    url: "/password",
+    data: JSON.stringify(postData),
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: function(data){console.log(data);},
+    failure: function(errMsg) {
+        console.log(errMsg);
+    }
+    });
+
+
+    $("#entryText").html("");
+    password = [];
+
+    if(success){
+      start = null;
+      customAlert("You have entered the correct password!", correctCallback)
+    }
+    else {
+      customAlert("You have entered the incorrect password!", incorrectCallback)
+    }
 
     // TODO what happens after done?
 
     // TODO only clickable after length === 6
-
-    $("#entryText").html("");
 }
 
 // Deals with click
@@ -159,11 +221,21 @@ function animalClick(animal, length) {
 
     else {
         entry_text.html("&#8226;" + entry_text.html())
-
+        password.push(animal + '_' + length)
         audio = new Audio(path + animal + '_' + length + '.mp3');
     }
 
     audio.play();
+}
+
+function isPassCorrect(){
+  let correctPass = passwords_enum[currentAccount];
+  for(let i = 0; i < 6; i++){
+      if(password[i] != correctPass[i]){
+        return false;
+      }
+  }
+  return true;
 }
 
 // Moves entry bar on resize
@@ -173,3 +245,11 @@ function windowResize() {
     entry_bar();
     entry_buttons();
 }
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+function sessionID() {
+  return '_' + Math.random().toString(36).substr(2, 9);
+};

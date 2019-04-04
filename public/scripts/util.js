@@ -69,8 +69,6 @@ function customAlert(message, callback=null){
 
 }
 
-
-
 // Clears all elements related to custom alert
 function removeCustomAlert() {
     let alertElements = $(".customAlert")
@@ -83,4 +81,33 @@ function removeCustomAlert() {
 // See if elements exist with custom alert class
 function customAlertFinished() {
     return ($(".customAlert").length === 0)
+}
+
+function startCallback() {
+    let postData = {
+      user: "test",
+      start: Date.now(),
+      session: session
+    }
+
+    $.ajax({
+      type: "POST",
+      url: "/password",
+      data: JSON.stringify(postData),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function(data){console.log(data);},
+      failure: function(errMsg) {
+          console.log(errMsg);
+      }
+    });
+}
+
+function correctCallback(){
+    console.log("function: correct");
+    location.reload();
+}
+
+function incorrectCallback() {
+    console.log("function: incorrect");
 }
