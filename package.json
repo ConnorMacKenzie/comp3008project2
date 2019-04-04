@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/ConnorMacKenzie/comp3008project2#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "body-parser": "^1.18.3",
+    "csv-parser": "^2.2.0",
+    "csv-writer": "^1.2.0",
+    "express": "^4.16.4",
+    "googleapis": "^27.0.0"
   }
 }
