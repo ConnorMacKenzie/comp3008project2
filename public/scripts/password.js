@@ -27,11 +27,11 @@ const accounts = ['bank', 'email', 'shop']
 
 const N = animal_names.length;
 
-var password = [];
-var start;
-var end;
-var currentAccount;
-var session = sessionID(36);
+let password = [];
+let start;
+let end;
+let currentAccount;
+let session = sessionID(36);
 
 // Add animals pictures and buttons
 $(document).ready(function(){
@@ -169,21 +169,21 @@ function done() {
     let success = isPassCorrect();
 
     let postData = {
-      user: "test",
-      success: success,
-      password: password,
-      end: end,
-      session: session
+        user: "test",
+        success: success,
+        password: password,
+        end: end,
+        session: session
     }
 
     $.ajax({
-    type: "POST",
-    url: "/password",
-    data: JSON.stringify(postData),
-    contentType: "application/json; charset=utf-8",
-    dataType: "json",
-    success: function(data){console.log(data);},
-    failure: function(errMsg) {
+        type: "POST",
+        url: "/password",
+        data: JSON.stringify(postData),
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function(data){console.log(data);},
+        failure: function(errMsg) {
         console.log(errMsg);
     }
     });
