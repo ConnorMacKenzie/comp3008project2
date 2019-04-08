@@ -11,35 +11,76 @@
     <script src="scripts/util.js"></script>
   </head>
 
-  <body onresize="windowResize()">
-    
-  <div id="entry">
-    <p id="entryText"></p>
+  <body>
+
+  <div id="mode">
+    <p id="mode_text" class="text">Practice Mode: </p>
+    <button id="switch_password_button" class="top_buttons" onclick="switch_password()"> Switch Password</button>
+    <br>
+    <button id="password_hint" class="top_buttons" onclick="hint()">Password Hint</button>
+    <br>
+    <button id="start_test_button" class="top_buttons hidden" onclick="test()">Start Test</button>
   </div>
 
-  <table id="table" align="center">
 
-    <tr class="tRow">
+  <table id="entry_table" align="center">
 
-      <td id="tData0" class="tData"><div id="tDiv0" class="tDiv"></div></td>
+    <tr class="entry_tRow">
 
-      <td id="tData1" class="tData"><div id="tDiv1" class="tDiv"></div></td>
-
-      <td id="tData2" class="tData"><div id="tDiv2" class="tDiv"></div></td>
+      <td id="entry_tData" class="entry_tData">
+          <div id="entry">
+            <p id="entryText"></p>
+          </div>
+      </td>
 
     </tr>
 
-    <tr class="tRow">
+    <tr class="entry_tRow">
 
-      <td id="tData3" class="tData"><div id="tDiv3" class="tDiv"></div></td>
-
-      <td id="tData4" class="tData"><div id="tDiv4" class="tDiv"></div></td>
-
-      <td id="tData5" class="tData"><div id="tDiv5" class="tDiv"></div></td>
+      <td id="entry_buttons_tData" class="entry_tData">
+        <div id="entry_buttons_tDiv" class="tDiv"></div>
+      </td>
 
     </tr>
 
   </table>
+
+  <table id="animal_table" align="center">
+
+    <tr class="tRow">
+
+      <td id="tData0" class="tData">
+        <div id="tDiv0" class="tDiv"></div>
+      </td>
+
+      <td id="tData1" class="tData">
+        <div id="tDiv1" class="tDiv"></div>
+      </td>
+
+      <td id="tData2" class="tData">
+        <div id="tDiv2" class="tDiv"></div>
+      </td>
+
+    </tr>
+
+    <tr class="tRow">
+
+      <td id="tData3" class="tData">
+        <div id="tDiv3" class="tDiv"></div>
+      </td>
+
+      <td id="tData4" class="tData">
+        <div id="tDiv4" class="tDiv"></div>
+      </td>
+
+      <td id="tData5" class="tData">
+        <div id="tDiv5" class="tDiv"></div>
+      </td>
+
+    </tr>
+
+  </table>
+
   </body>
 
 </html>

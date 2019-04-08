@@ -51,17 +51,17 @@ function customAlert(message, callback=null){
         "</button>"
     );
 
-    $(document).keypress(function(event){
-
-        console.log($("#alertButton"))
-
-        let keycode = (event.keyCode ? event.keyCode : event.which);
-
-        if (keycode === 13) {
-            $("#alertButton").click();
-            $(document).off()
-        }
-    });
+    // $(document).keypress(function(event){
+    //
+    //     console.log($("#alertButton"))
+    //
+    //     let keycode = (event.keyCode ? event.keyCode : event.which);
+    //
+    //     if (keycode === 13) {
+    //         $("#alertButton").click();
+    //         $(document).off()
+    //     }
+    // });
 
     if(callback !== null){
         $("#alertButton").click(callback);
@@ -81,33 +81,4 @@ function removeCustomAlert() {
 // See if elements exist with custom alert class
 function customAlertFinished() {
     return ($(".customAlert").length === 0)
-}
-
-function startCallback() {
-    let postData = {
-      user: "test",
-      start: Date.now(),
-      session: session
-    }
-
-    $.ajax({
-      type: "POST",
-      url: "/password",
-      data: JSON.stringify(postData),
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      success: function(data){console.log(data);},
-      failure: function(errMsg) {
-          console.log(errMsg);
-      }
-    });
-}
-
-function correctCallback(){
-    console.log("function: correct");
-    location.reload();
-}
-
-function incorrectCallback() {
-    console.log("function: incorrect");
 }

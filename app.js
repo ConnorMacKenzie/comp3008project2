@@ -4,8 +4,6 @@ const fs = require('fs');
 const app = express();
 const port = 3000;
 
-
-
 app.listen(port, () => console.log(`App running at: http://localhost:${port}`));
 
 // Middleware to display what is being requested
@@ -18,9 +16,9 @@ app.use(function(req, res, next){
 app.get('/', (req, res) => res.sendFile(path.join(__dirname + '/public/html/index.html')));
 
 app.post('/password', (req, res) =>{
-    // console.log(req.body);
+    console.log(req.body);
 
-    const headers = ["user", "session", "start", "end", "success", "password"];
+    const headers = ["user", "session", "success", "attempt number", "time elapsed (s)", "account type", "password"];
 
     write_csv("stats.csv", req.body, headers);
 
