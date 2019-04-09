@@ -28,6 +28,7 @@
     "googleapis": "^27.0.0"
   },
   "engines": {
-    "node": "10.x"
+    "node": "10.x",
+    "npm": "6.7.0"
   }
 }
