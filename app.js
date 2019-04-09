@@ -4,6 +4,8 @@ const fs = require('fs');
 const app = express();
 const port = 3000;
 
+process.env.PWD = process.cwd()
+
 app.listen(process.env.PORT || port, () => console.log(`App running at: http://localhost:${port} or https://stark-mountain-65813.herokuapp.com/` ));
 
 // Middleware to display what is being requested
@@ -26,7 +28,7 @@ app.post('/password', (req, res) =>{
 });
 
 // Static server for favicon, style, and JS files
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(process.env.PWD + "/public"));
 
 function write_csv(filename, row_obj, headers) {
 
