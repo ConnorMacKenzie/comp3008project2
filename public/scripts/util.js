@@ -1,8 +1,17 @@
+/*
+*  This is script responsible for:
+*
+*      Displaying custom alerts
+*      Styling associated with custom alert
+*      Calling callback functions
+*
+* */
 
-
+// jQuery to dim background and display white message box with black text and OK button
 function customAlert(message, callback=null){
     console.log("function: customAlert");
 
+    // Dim background
     $('body').prepend(
         "<div id='overlay' class='customAlert' " +
         "style='" +
@@ -14,6 +23,7 @@ function customAlert(message, callback=null){
         "'></div>"
     );
 
+    // Add white message area
     $('#overlay').append(
         "<div id='messageBox' class='customAlert' " +
         "style='" +
@@ -28,6 +38,7 @@ function customAlert(message, callback=null){
         "'></div>"
     );
 
+    // Add black text
     $('#messageBox').append(
         "<h1 id='messageText' class='customAlert text'" +
         "style='" +
@@ -39,6 +50,7 @@ function customAlert(message, callback=null){
         "</h1>"
     );
 
+    // Adds OK button
     $('#messageBox').append(
         "<button id='alertButton' class='customAlert text'" +
         "onclick='removeCustomAlert()'" +
@@ -51,26 +63,16 @@ function customAlert(message, callback=null){
         "</button>"
     );
 
-    // $(document).keypress(function(event){
-    //
-    //     console.log($("#alertButton"))
-    //
-    //     let keycode = (event.keyCode ? event.keyCode : event.which);
-    //
-    //     if (keycode === 13) {
-    //         $("#alertButton").click();
-    //         $(document).off()
-    //     }
-    // });
-
+    // Adds callback to OK button click
     if(callback !== null){
         $("#alertButton").click(callback);
     }
-
 }
 
 // Clears all elements related to custom alert
 function removeCustomAlert() {
+    console.log("function: removeCustomAlert");
+
     let alertElements = $(".customAlert")
 
     for (let i=0; i<alertElements.length; i++){
