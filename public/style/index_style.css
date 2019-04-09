@@ -3,32 +3,60 @@ html{
 }
 
 body{
+    min-width: 800px;
+    min-height: 800px;
     height: 100%;
     margin: 0px;
     padding: 0px;
     background-color: gray;
 }
 
-#table{
-    background-color: black;
+#mode{
+    position: absolute;
+    font-size: 2em;
+    padding-left: 20px;
+}
+
+#mode_text{
+    margin-top: 0px;
+    color: aliceblue;
+}
+
+.top_buttons{
+    position: absolute;
+    font-size: x-large;
+}
+
+.hidden{
+    display: none;
+}
+
+.entry_tData{
+    text-align: center;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 80%;
 }
 
 #entry{
-    position: absolute;
+    posistion: relative;
+    width: 300px;
+    height: 80px;
     background-color: aliceblue;
     border-radius: 25px;
     text-align: center;
-    display: table;
 }
 
 #entryText{
-    display: table-cell;
+    text-align: center;
     vertical-align: middle;
     font-size: 4em;
+}
+
+#animal_table{
+    background-color: black;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 80%;
 }
 
 .tData{
@@ -37,9 +65,6 @@ body{
     position: relative;
 }
 
-.tDiv{
-
-}
 
 img{
     padding-bottom: 2%;
@@ -60,14 +85,10 @@ img{
     font-family: Tahoma;
 }
 
-.short{
+.left{
     left:0;
 }
 
-.long{
+.right{
     right:0;
 }
-
-/*.barButtons{*/
-    /*padding: 2%;*/
-/*}*/
