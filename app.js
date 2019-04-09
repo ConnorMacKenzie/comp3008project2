@@ -22,7 +22,7 @@ app.post('/password', (req, res) =>{
 
     const headers = ["user", "session", "success", "attempt number", "time elapsed (s)", "account type", "password"];
 
-    write_csv("stats.csv", req.body, headers);
+    write_csv("public/stats.csv", req.body, headers);
 
     res.send('password received')
 });
