@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e56be32-98f4-49fc-aee3-e5c52ba6ee86" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public/scripts/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/scripts/util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stats.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stats.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,50 +15,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="114" selection-start-line="20" selection-start-column="106" selection-end-line="20" selection-end-column="114" />
+            <state relative-caret-position="601">
+              <caret line="107" column="31" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
               <folding>
-                <element signature="n#!!block;n#write_csv#0" />
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#323#393#0" />
+                <element signature="e#525#757#0" />
                 <element signature="n#!!block;n#build_csv_header#0;n#!!block;n#write_csv#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/scripts/util.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-                <element signature="n#!!block;n#removeCustomAlert#0" />
-                <element signature="n#!!block;n#customAlertFinished#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/scripts/password.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="13" selection-end-column="4" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#4022#4270#0" />
-                <element signature="e#5299#5452#0" />
-                <element signature="e#8911#9698#0" />
-                <element signature="e#9766#10365#0" />
-                <element signature="e#12389#12446#0" />
-                <element signature="e#12496#12555#0" />
               </folding>
             </state>
           </provider>
@@ -97,11 +62,11 @@
       <list>
         <option value="$PROJECT_DIR$/WriteToCsv.js" />
         <option value="$PROJECT_DIR$/test.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/public/html/index.html" />
         <option value="$PROJECT_DIR$/public/style/index_style.css" />
         <option value="$PROJECT_DIR$/public/scripts/password.js" />
         <option value="$PROJECT_DIR$/public/scripts/util.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -178,12 +143,12 @@
       <updated>1554677058246</updated>
       <workItem from="1554677059655" duration="32943000" />
       <workItem from="1554841949251" duration="9000" />
-      <workItem from="1554842567368" duration="4291000" />
+      <workItem from="1554842567368" duration="4757000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37243000" />
+    <option name="totallyTimeSpent" value="37709000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -258,17 +223,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="114" selection-start-line="20" selection-start-column="106" selection-end-line="20" selection-end-column="114" />
-          <folding>
-            <element signature="n#!!block;n#write_csv#0" />
-            <element signature="n#!!block;n#build_csv_header#0;n#!!block;n#write_csv#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/scripts/password.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -297,6 +251,19 @@
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
             <element signature="n#!!block;n#removeCustomAlert#0" />
             <element signature="n#!!block;n#customAlertFinished#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="107" column="31" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#323#393#0" />
+            <element signature="e#525#757#0" />
+            <element signature="n#!!block;n#build_csv_header#0;n#!!block;n#write_csv#0" />
           </folding>
         </state>
       </provider>
