@@ -41,7 +41,7 @@ $(document).ready(function(){
         // Animal picture
         curr_tDiv.append("<img "
             + "alt='" + animal_names[i] +" image' "
-            + "src='assets/images/"
+            + "src='images/"
             + animal_names[i]
             + ".png'"
             + ">");
@@ -270,7 +270,7 @@ function animalClick(animal, length) {
 
     let entry_text = $("#entryText")
 
-    let path = 'assets/mp3s/'
+    let path = 'mp3s/'
     let audio;
 
     if (entry_text.html().length > 5) {
