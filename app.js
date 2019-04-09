@@ -28,7 +28,7 @@ app.post('/password', (req, res) =>{
 });
 
 // Static server for favicon, style, and JS files
-app.use(express.static(process.env.PWD + "/public"));
+app.use(express.static(process.env.PWD + "/public", { maxAge: 86400000 }));
 
 function write_csv(filename, row_obj, headers) {
 
