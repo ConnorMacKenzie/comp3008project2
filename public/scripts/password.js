@@ -149,7 +149,7 @@ function animal_button(animal, length) {
     let entry_text = $("#entryText");
 
     // Sets audio path and inits variable
-    let path = 'assets/mp3s/';
+    let path = 'mp3s/';
     let audio;
 
     // Sets audio to error if 6 sounds already present)
@@ -299,8 +299,6 @@ function hint(string_return=false){
     // Two new lines when hint is being returned as a string
     alert_string += ((string_return === true) ? ":<br><br>" : ":<br>");
 
-    let path = 'mp3s/'
-    let audio;
     // Modify password test representation for user
     for (let i in passwords_enum[currentAccount]){
 
