@@ -15,7 +15,7 @@ app.use(function(req, res, next){
     next();
 });
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname + '/public/html/index.html')));
+app.get('/', (req, res) => res.sendFile(path.join(process.env.PWD + '/public/html/index.html')));
 
 app.post('/password', (req, res) =>{
     console.log(req.body);
