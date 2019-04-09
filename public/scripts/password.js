@@ -41,7 +41,7 @@ $(document).ready(function(){
         // Animal picture
         curr_tDiv.append("<img "
             + "alt='" + animal_names[i] +" image' "
-            + "src='images/"
+            + "src='public/images/"
             + animal_names[i]
             + ".png'"
             + ">");
