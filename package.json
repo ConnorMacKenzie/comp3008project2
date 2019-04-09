@@ -4,7 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "web": "node app.js",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,8 @@
     "express": "^4.16.4",
     "fast-csv": "^2.4.1",
     "googleapis": "^27.0.0"
+  },
+  "engines": {
+    "node": "10.x"
   }
 }
