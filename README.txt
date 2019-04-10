@@ -40,7 +40,7 @@ Overview: (All password schema instructions given by app)
     Logs:
         Logs of the data gathered from the test once the test is complete are available at:
             Locally: http://localhost:3000/stats.csv
-            Heroku: https://stark-mountain-65813.herokuapp.com/stats.csv (The remote logs will expire after the applicaiton goes idle)
+            Heroku: https://stark-mountain-65813.herokuapp.com/stats.csv (The remote logs will expire after the application goes idle)
 
 Note:
 
